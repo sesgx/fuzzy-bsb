@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fuzzy-bsb"
+version = "0.0.1"
+requires-python = ">= 3.9"
+description = "..."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["snowballing", "fuzzy matching", "backward snowballing"]
+dependencies = ["rapidfuzz==3.6.2"]
+
+[tool.ruff]
+extend-select = [
+    # isort
+    "I001",
+    "C",
+]
+unfixable = ["F841"]
+exclude = [".venv", "~/.pyenv/"]
+ignore-init-module-imports = true
+fix = true
